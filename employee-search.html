@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <button id="bPolice"> POLICE</button>
+    <button id="bFire">FIRE</button>
+    <script>
+      document.querySelector("button#bPolice").addEventListener("click", (e) => {
+        let text =  e.target.innerText;
+        let link = "https://data.cityofchicago.org/resource/xzkq-xp2w.json?department=";
+        window.open(link.concat(text), "Hey");
+
+      })
+      document.querySelector("button#bFire").addEventListener("click", (e) => {
+        let text =  e.target.innerText;
+        let link = "https://data.cityofchicago.org/resource/xzkq-xp2w.json?department=";
+        window.open(link.concat(text), "Hey");
+
+      })
+    </script>
+  </body>
+</html>

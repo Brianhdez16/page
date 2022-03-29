@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      };
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>replit</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+
   </head>
   <body>
-    Hello world
-    <script src="script.js"></script>
+    <h1>IT202 - Spring 2022 - Pages</h1>
+
+    <div id="pageLinks"></div>
+
+
+    <script>
+      let assignments = [
+        "css_basics.html",
+        "bootstrap_rwd_basics.html",
+        "employee-search.html",
+        "basic-fetch-with-bootstrap-cards.html",
+        "map_basic.html",
+        "googleMapsAndStaticData.html",
+        "googleMapsAndLiveData.html"
+      ]
+      let ctr = 0;
+      let linksDiv = document.querySelector("#pageLinks");
+
+      assignments.forEach ( (item) => {
+        let a = document.createElement("a");
+        a.href = item;
+        a.innerText = item;
+        
+        linksDiv.append(a);
+        linksDiv.append(document.createElement("hr"));
+        ctr++;
+      });
+
+
+    </script>
   </body>
 </html>
